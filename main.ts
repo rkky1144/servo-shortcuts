@@ -26,7 +26,7 @@ namespace servoCalculation {
                     SuperBit.Servo(SuperBit.enServo.S1, (180 - Math.atan2(x, y) * (180 / 3.14)) + t1)
                     SuperBit.Servo(SuperBit.enServo.S2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14) - ((180 - Math.atan2(x, y) * (180 / 3.14)) - 90))) + t2)
                 }
-                basic.pause(5)
+                basic.pause(10)
             }
         } else {
             for (let index2 = 100; index2 >= 0; index2--) {
@@ -39,7 +39,7 @@ namespace servoCalculation {
                     SuperBit.Servo(SuperBit.enServo.S1, (180 - Math.atan2(x2, y2) * (180 / 3.14)) + t1)
                     SuperBit.Servo(SuperBit.enServo.S2, (180 - (Math.acos(Math.sqrt(x2 ** 2 + y2 ** 2) / 160) * 2 * (180 / 3.14) - ((180 - Math.atan2(x2, y2) * (180 / 3.14)) - 90))) + t2)
                 }
-                basic.pause(5)
+                basic.pause(10)
             }
         }
     }
