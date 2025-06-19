@@ -10,6 +10,19 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/rkky1144/servo-shortcuts** and import
 
+## Usage
+
+### ``servo1 at``
+
+These ``servo1 at`` and ``servo2 at`` lock can be used to show the calculated degree of the required servos.
+
+``` blocks
+basic.showNumber(servoCalculation.servo1at(0, 0))
+basic.showNumber(servoCalculation.servo2at(0, 0))
+servoCalculation.clampAt(0, 0, false, 0, 0)
+```
+
+
 ## Edit this project
 
 To edit this repository in MakeCode.
