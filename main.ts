@@ -1,17 +1,17 @@
 
-SuperBit.Servo(4, 90)
-SuperBit.Servo(1, 0.68)
-SuperBit.Servo(2, 90.72)
-SuperBit.Servo(3, 10)
+SuperBit.Servo(SuperBit.enServo.S4, 90)
+SuperBit.Servo(SuperBit.enServo.S1, 0.68)
+SuperBit.Servo(SuperBit.enServo.S2, 90.72)
+SuperBit.Servo(SuperBit.enServo.S3, 10)
 
 namespace servoCalculation {
 
     //%block = "clamp open $open"
     export function clampOpen(open: boolean) {
         if (open) {
-            SuperBit.Servo(3, 135)
+            SuperBit.Servo(SuperBit.enServo.S3, 135)
         } else {
-            SuperBit.Servo(3, 10)
+            SuperBit.Servo(SuperBit.enServo.S3, 10)
         }
     }
 
@@ -22,11 +22,11 @@ namespace servoCalculation {
                 let x = Math.map(index, 0, 100, 81, first_x)
                 let y = Math.map(index, 0, 100, 81, first_y)
                 if (0 <= y) {
-                    SuperBit.Servo(1, (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14)) + t1)
-                    SuperBit.Servo(2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14)) - (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14))) + t2)
+                    SuperBit.Servo(SuperBit.enServo.S1, (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14)) + t1)
+                    SuperBit.Servo(SuperBit.enServo.S2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14)) - (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14))) + t2)
                 } else {
-                    SuperBit.Servo(1, (180 - Math.atan2(x, y) * (180 / 3.14)))
-                    SuperBit.Servo(2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14) - ((180 - Math.atan2(x, y) * (180 / 3.14)) - 90))))
+                    SuperBit.Servo(SuperBit.enServo.S1, (180 - Math.atan2(x, y) * (180 / 3.14)))
+                    SuperBit.Servo(SuperBit.enServo.S2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14) - ((180 - Math.atan2(x, y) * (180 / 3.14)) - 90))))
                 }
                 basic.pause(10)
             }
@@ -35,11 +35,11 @@ namespace servoCalculation {
                 let x = Math.map(index, 0, 100, 81, first_x)
                 let y = Math.map(index, 0, 100, 81, first_y)
                 if (0 <= y) {
-                    SuperBit.Servo(1, (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14)) + t1)
-                    SuperBit.Servo(2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14)) - (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14))) + t2)
+                    SuperBit.Servo(SuperBit.enServo.S1, (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14)) + t1)
+                    SuperBit.Servo(SuperBit.enServo.S2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14)) - (90 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) + Math.atan2(y, x)) * (180 / 3.14))) + t2)
                 } else {
-                    SuperBit.Servo(1, (180 - Math.atan2(x, y) * (180 / 3.14)))
-                    SuperBit.Servo(2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14) - ((180 - Math.atan2(x, y) * (180 / 3.14)) - 90))))
+                    SuperBit.Servo(SuperBit.enServo.S1, (180 - Math.atan2(x, y) * (180 / 3.14)))
+                    SuperBit.Servo(SuperBit.enServo.S2, (180 - (Math.acos(Math.sqrt(x ** 2 + y ** 2) / 160) * 2 * (180 / 3.14) - ((180 - Math.atan2(x, y) * (180 / 3.14)) - 90))))
                 }
                 basic.pause(10)
             }
