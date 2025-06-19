@@ -1,5 +1,5 @@
 
-SuperBit.Servo(0, 90)
+SuperBit.Servo(4, 90)
 SuperBit.Servo(1, 0.68)
 SuperBit.Servo(2, 90.72)
 SuperBit.Servo(3, 10)
