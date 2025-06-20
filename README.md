@@ -16,7 +16,7 @@ On program start, the extension initializes servo angles to:
 - Servo 1: 0°
 - Servo 2: 90°
 - Servo 3: 10°
-- Servo 4: 90°
+- Servo 4: 0°
 
 **Note:** These defaults depend on your robot arm's initial assembly configuration and may need adjustment.
 
