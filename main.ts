@@ -1,4 +1,4 @@
-SuperBit.Servo(SuperBit.enServo.S4, 90)
+SuperBit.Servo(SuperBit.enServo.S4, 0)
 SuperBit.Servo(SuperBit.enServo.S1, 0)
 SuperBit.Servo(SuperBit.enServo.S2, 90)
 SuperBit.Servo(SuperBit.enServo.S3, 10)
