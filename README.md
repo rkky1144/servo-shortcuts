@@ -28,8 +28,8 @@ On program start, the extension initializes servo angles to:
 Display calculated servo angles based on coordinates:
 
 ```blocks
-basic.showNumber(servoCalculation.servo1At(81, 81))
-basic.showNumber(servoCalculation.servo2At(81, 81))
+basic.showNumber(servoCalculation.servo1At(80, 80))
+basic.showNumber(servoCalculation.servo2At(80, 80))
 ```
 
 **Parameters**: 
@@ -40,8 +40,8 @@ basic.showNumber(servoCalculation.servo2At(81, 81))
 
 To drive servos directly (if pins S1/S2 are unresponsive):
 ```blocks
-SuperBit.Servo(SuperBit.enServo.S1, servoCalculation.servo1At(81, 81))
-SuperBit.Servo(SuperBit.enServo.S2, servoCalculation.servo2At(81, 81))
+SuperBit.Servo(SuperBit.enServo.S1, servoCalculation.servo1At(80, 80))
+SuperBit.Servo(SuperBit.enServo.S2, servoCalculation.servo2At(80, 80))
 ```
 
 ---
